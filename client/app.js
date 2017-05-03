@@ -10,7 +10,14 @@ import store from './store'
 import * as filters from './filters'
 import { TOGGLE_SIDEBAR } from 'vuex-store/mutation-types'
 
+
+Vue.component('FormInputText', require('./components/form/FormInputText'))
+Vue.component('FormInputTextarea', require('./components/form/FormInputTextarea'))
+Vue.component('FormInputWysiwyg', require('./components/form/FormInputWysiwyg'))
+
+
 Vue.router = router
+
 Vue.use(VueAxios, axios)
 Vue.use(VueAuth, {
   auth: {
@@ -19,12 +26,12 @@ Vue.use(VueAuth, {
     },
     response: function (res) {
       // Get Token from response body
-      return res.data
+      return res.data.access_token
     }
   },
   http: require('@websanova/vue-auth/drivers/http/axios.1.x.js'),
   router: require('@websanova/vue-auth/drivers/router/vue-router.2.x.js'),
-  loginData: { url: 'http://localhost:6789/login', fetchUser: false },
+  loginData: { url: 'https://oakmere.dev/oauth/token', fetchUser: false },
   refreshData: { enabled: false }
 })
 

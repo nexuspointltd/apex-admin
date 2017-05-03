@@ -63,7 +63,13 @@ export default {
         headers: {
           'Content-Type': 'application/json'
         },
-        data: this.data.body,
+        data: {
+          grant_type: 'password',
+          client_id: '2',
+          client_secret: '979h6dRpfsmI1V4JdtVpw7xQjdg5IM4r5llxzjk6',
+          scope: '',
+          ...this.data.body
+        },
         rememberMe: this.data.rememberMe,
         redirect: {name: redirect ? redirect.from.name : 'Home'},
         success (res) {
