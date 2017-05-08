@@ -36,7 +36,7 @@
     import VuetablePaginationInfo from 'vuetable-2/src/components/VuetablePaginationInfo'
     import CustomActions from './CustomActions'
 
-//    Vue.component('custom-actions', CustomActions)
+    //    Vue.component('custom-actions', CustomActions)
 
     export default {
         components: {
@@ -91,13 +91,11 @@
         },
 
         methods: {
-            //...
             onPaginationData(paginationData)
             {
                 this.$refs.pagination.setPaginationData(paginationData)
                 this.$refs.paginationInfo.setPaginationData(paginationData)   // <----
-            }
-            ,
+            },
             onChangePage(page)
             {
                 this.$refs.vuetable.changePage(page)

@@ -13,7 +13,7 @@ import { TOGGLE_SIDEBAR } from 'vuex-store/mutation-types'
 
 Vue.component('FormInputText', require('./components/form/FormInputText'))
 Vue.component('FormInputTextarea', require('./components/form/FormInputTextarea'))
-Vue.component('FormInputWysiwyg', require('./components/form/FormInputWysiwyg'))
+Vue.component('FormInputWysiwyg', require('./components/form/TrixVue'))
 
 
 Vue.router = router

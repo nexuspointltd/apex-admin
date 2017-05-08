@@ -66,7 +66,7 @@ export default {
         data: {
           grant_type: 'password',
           client_id: '2',
-          client_secret: '979h6dRpfsmI1V4JdtVpw7xQjdg5IM4r5llxzjk6',
+          client_secret: 'OycaDuGWcH0mF21IHyzeSL5D15kO24QLfA34aSoF',
           scope: '',
           ...this.data.body
         },
